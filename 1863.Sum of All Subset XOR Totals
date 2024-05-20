@@ -1,0 +1,16 @@
+class Solution{
+  public int subsetXORsum(int []nums){
+    int n=nums.length;
+    int total=0;
+    for(int i=0;i<(1<<n);i++){
+      int currtotal=0;
+      for(int j=0;j<n;j++){
+        if((i & (1 << j)) != 0){
+          currTotal ^= nums[j];
+        }
+      }
+    total=+currtotal;
+    }
+  return total;
+  }
+}
